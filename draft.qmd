@@ -1,0 +1,44 @@
+---
+title: "Python workshop"
+author: "Stat243"
+editor: visual
+---
+
+# Ways of running python
+
+## 1. Directly in script
+
+```{python}
+import numpy as np
+import pandas as pd
+import time
+py_install(packages="matplotlib")
+#import matplotlib.pyplot as plt
+```
+
+```{python}
+def run_linalg(n):
+    z = np.random.normal(0, 1, size=(n, n))
+    print(time.time())
+    x = z.T.dot(z)   # x = z'z
+    print(time.time())
+    U = np.linalg.cholesky(x)  # factorize as x = U'U
+    print(time.time())
+```
+
+```{python}
+run_linalg(4000)
+```
+
+## 2. Run in the shell
+
+If run in the shell," python calc.py"
+
+## 3.Run code as a module
+
+```{python}
+# import calc
+# calc.run_linalg(4000)
+```
+
+# Basic use of Python
